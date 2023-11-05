@@ -1,0 +1,66 @@
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign in / Sign up</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+	<link rel="stylesheet" href="{% static 'authenticate.css' %}">
+<body>
+	<form id="form2" method="post" action="log">
+		{% csrf_token %}
+		<div class="login page">
+			<h1>Login</h1>
+			<div class="username">
+				<i class="fa fa-user"></i>
+				<input type="text" placeholder="Username" id="LogUserName" name="log-user">
+			</div>
+			<div class="password">
+				<i class="fa fa-lock"></i>
+				<input type="password" placeholder="Password" id="LogPassword" name="log-pwd">
+			</div>
+			<div class="submit">
+					<input type="button" onclick="login()" value="LOG IN">
+			</div>
+		</div>
+	</form>
+
+	<form id="form1" method="post" action="register">
+		{% csrf_token %}
+		<div class="register page">
+			<h1>REGISTER</h1>
+			<div class="username">
+				<i class="fa fa-user"></i>
+				<input type="text" placeholder="Username" id="RegUserName" name="reg-user">
+			</div>
+			<div class="password">
+				<i class="fa fa-lock"></i>
+				<input type="password" placeholder="Password" id="RegPassword" name="reg-pwd">
+			</div>
+			<div class="confirm password">
+				<i class="fa fa-lock"></i>
+				<input type="password" placeholder="Confirm Password" id="ConfirmPassword">
+			</div>
+			<div class="submit">
+				<input type="button" onclick="register()" value="REGISTER">
+			</div>
+		</div>
+    </form>
+
+	<div class="message">
+		{% if flag %}
+			<span class="reg_suc">Registration Successful! please login</span>
+		{% endif %}
+		{% if flag2 %}
+			<span class="reg_mis">User already exists! please login</span>
+		{% endif %}
+
+		{% if log_flag %}
+			<span class="log_mis">User doesn't exists! please check the details</span>
+		{% endif %}
+	</div>
+
+</body>
+	<script type="text/javascript" src="{% static 'authenticate.js' %}"></script>
+</html>

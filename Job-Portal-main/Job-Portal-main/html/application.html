@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>Application</title>
+</head>
+<style>
+    *{
+        margin : 0px;
+        padding : 0px;
+        background : #001;
+        color : #fff;
+    }
+    h1{
+        font-size : 29px;
+        color : #ADE;
+        text-align : center;
+    }
+    h1:hover{
+        color : #5F5;
+    }
+    main{
+        display : flex;
+        justify-content : center;
+        align-items : center;
+        flex-direction : column;
+    }
+    .item{
+        margin : 23px 0 23px 0;
+    }
+    .head{
+        font-size : 25px;
+        color : #AEA;
+        margin-right : 10px;
+    }
+    .data{
+        font-size : 20px;
+        color : #ccc;
+    }
+    .submit{
+        text-decoration : none;
+        font-size : 23px;
+        width : cover;
+        height : cover;
+        border : 1px solid #333;
+        border-radius : 10px;
+        cursor : pointer;
+        padding : 10px;
+        position : relative;
+        left : 50%;
+    }
+    .submit:hover, .submit:focus{
+        border-color : #CAA500;
+        font-size : 27px;
+        color : #5F5;
+    }
+</style>
+<body>
+    <h1>Application for {{data.company}} {{data.topic}} developer</h1>
+    <div class="main">
+        <div class="item">
+            <span class="head">Company:</span>
+            <span class="data">{{data.company}}</span>
+        </div>
+        <div class="item">
+            <span class="head">About:</span>
+            <span class="data">{{data.about}}</span>
+        </div>
+        <div class="item">
+            <span class="head">Location:</span>
+            <span class="data">{{data.location}}</span>
+        </div>
+        <div class="item">
+            <span class="head">Experience</span>
+            <span class="data">{{data.experience}}</span>
+        </div>
+        <div class="item">
+            <span class="head">Salary:</span>
+            <span class="data">{{data.salary}}</span>
+        </div>
+        <a href="{{data.link}}" class="submit">Click Here</a>
+    </div>
+</body>
+</html>

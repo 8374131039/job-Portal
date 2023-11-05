@@ -1,0 +1,142 @@
+*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		background: #A0A0A0FF;
+	}
+	.login{
+		position: absolute;
+		width: 280px;
+		height: 313px;
+		bottom: 165px;
+		background: #fff;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		z-index: 10;
+		box-shadow: 0 0 1px #000;
+			}
+	.register{
+		position: relative;
+		left: 70px;
+		width: 280px;
+		height: 313px;
+		display: flex;
+		background: #fff;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		box-shadow: 0 0 1px #000;
+		filter: blur(0.1px);
+		opacity: 0.9;
+		transition: 0.1s;
+		transform: rotate(-90deg) scale(0.8);
+		z-index: 0;
+	}
+	.register:hover{
+		filter: blur(0);
+		opacity: 1;
+		transform: rotate(-90deg) scale(0.85);
+	}
+	.forgot-password{
+		position: absolute;
+		width: 280px;
+		height: 313px;
+		bottom: 165px;
+		right: calc(40% - 8px);
+		background: #fff;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		z-index: 11;
+		box-shadow: 0 0 1px #000;
+		display: none;
+	}
+	.page h1{
+		position: absolute;
+		top: 10px;
+		color: #404040FF;
+		text-decoration: underline;
+		font-weight: 600;
+	}
+	.page .username{
+		position: absolute;
+		top: 73px;
+		width: 250px;
+		height: 30px;
+		background: #C0C0C0FF;
+		display: flex;
+		justify-content: center;
+	}
+	.page .password{
+		position: absolute;
+		top: 143px;
+		width: 250px;
+		height: 30px;
+		background: #C0C0C0FF;
+		display: flex;
+		justify-content: center;
+	}
+
+	.page .forgot {
+		position: absolute;
+		top: 209px;
+		text-decoration: none;
+	}
+	.page .submit{
+		position: absolute;
+		top: 262px;
+		background: #f00;
+		width: 280px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.page div i{
+		position: relative;
+		top: 22%;
+		float: left;
+		margin-right: 10px;
+	}
+	.page div input{
+		position: relative;
+		border: none;
+		outline: none;
+		background: none;
+	}
+	.page .forgot a{
+		text-decoration: none;
+	}
+	.page .submit input{
+		width: 280px;
+		height: 50px;
+		color: #fff;
+		cursor: pointer;
+		font-weight: 700;
+		filter: blur(0);
+	}
+	.register .confirm{
+		position: absolute;
+		top: 209px;
+	}
+	.message{
+	    position : absolute;
+	    bottom : 90px;
+	    left : 39%;
+	    width : 700px;
+	}
+	.log_mis, .reg_mis{
+	    font-size : 27px;
+	    color : red;
+	}
+	.reg_suc{
+	    font-size : 27px;
+	    color : green;
+	}
